@@ -13,11 +13,11 @@ Selection of an ISO image for the VM installer.
 # Prerequisites:
 Before using the script, ensure that your OpenBSD system has vmd enabled and that you have the necessary ISO images stored in /vm/image/iso.
 
-# Using the create_vm.sh Script:
+# Using the create_vm.ksh Script:
 
 Save the script as create_vm.sh on your OpenBSD system.
 Make the script executable with the command: chmod +x create_vm.sh.
-Run the script using: ./create_vm.sh.
+Run the script using: ./create_vm.ksh.
 
 Once executed, the script will prompt you to enter the following details:
 
