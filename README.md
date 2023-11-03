@@ -6,9 +6,9 @@ The create_vm.sh script is a user-friendly tool designed for OpenBSD users to si
 
 # Key Features of the create_vm.sh Script:
 
-    Interactive prompts for user input.
-    Customizable VM name and disk size.
-    Selection of an ISO image for the VM installer.
+Interactive prompts for user input.
+Customizable VM name and disk size.
+Selection of an ISO image for the VM installer.
 
 # Prerequisites:
 Before using the script, ensure that your OpenBSD system has vmd enabled and that you have the necessary ISO images stored in /vm/image/iso.
