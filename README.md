@@ -15,21 +15,21 @@ Before using the script, ensure that your OpenBSD system has vmd enabled and tha
 
 # Using the create_vm.sh Script:
 
-    Save the script as create_vm.sh on your OpenBSD system.
-    Make the script executable with the command: chmod +x create_vm.sh.
-    Run the script using: ./create_vm.sh.
+Save the script as create_vm.sh on your OpenBSD system.
+Make the script executable with the command: chmod +x create_vm.sh.
+Run the script using: ./create_vm.sh.
 
 Once executed, the script will prompt you to enter the following details:
 
-    VM Name: The desired name for your virtual machine.
-    Disk Size: The size of the virtual disk for your VM, specified in gigabytes (GB).
-    ISO Image: The name of the installer ISO image you wish to use for the VM.
+VM Name: The desired name for your virtual machine.
+Disk Size: The size of the virtual disk for your VM, specified in gigabytes (GB).
+ISO Image: The name of the installer ISO image you wish to use for the VM.
 
 After providing the necessary information, the script will automatically create the virtual disk and start the VM using the vmctl utility. You'll receive confirmation messages indicating the successful creation and start of your VM.
 
 # Example Usage:
  
-'''bash
+```bash
 Welcome to the VM creation wizard.
 Enter the name for your VM: my_vm
 Enter the disk size (in GB) for your VM: 50
@@ -37,6 +37,6 @@ Available ISO Images:
 install74.iso
 Enter the name of the installer ISO image you want to use: install74.iso
 VM creation process completed.
-'''bash
+```
 
 The create_vm.sh script is an excellent tool for both novice and experienced OpenBSD users, making VM creation a straightforward and hassle-free process.
