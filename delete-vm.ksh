@@ -1,48 +1,41 @@
 #!/bin/ksh
 
-# VMの一覧を表示
-list_vms() {
-    echo "Available Virtual Machines:"
-    vmctl status | awk 'NR>1 {print $NF}'
+# Function to list disk images
+list_disk_images() {
+    echo "Available Disk Images:"
+    ls /home/ryosuke/vm/image/disk/
 }
 
-# VMを削除
+# Function to delete a VM
 delete_vm() {
-    vm_name=$1
+    disk_image=$1
+    vm_name="${disk_image%.*}"
 
-    # VMが実行中かどうか確認
+    # Check if the VM is running
     running=$(vmctl status | grep -w "$vm_name")
     if [ -n "$running" ]; then
-        # VMを停止
+        # Stop the VM
         vmctl stop "$vm_name"
         echo "VM $vm_name has been stopped."
     fi
 
-    # VMのディスクイメージのパスを取得（仮のパス）
-    disk_image="/vm/image/disk/$vm_name.qcow2"
-
-    # ディスクイメージが存在するか確認
-    if [ -f "$disk_image" ]; then
-        # ディスクイメージを削除
-        rm "$disk_image"
-        echo "Disk image $disk_image has been deleted."
-    else
-        echo "Disk image $disk_image does not exist."
-    fi
+    # Delete the disk image
+    rm "/vm/image/disk/$disk_image"
+    echo "Disk image /vm/image/disk/$disk_image has been deleted."
 }
 
-# メインスクリプト
+# Main script starts here
 echo "Welcome to the VM deletion wizard."
 
-# VMの一覧を表示
-list_vms
+# List disk images
+list_disk_images
 
-# 削除するVMを選択
-echo -n "Enter the name of the VM you want to delete: "
-read vm_name
+# Prompt user to select a disk image to delete
+echo -n "Enter the name of the disk image you want to delete: "
+read disk_image
 
-# VMを削除
-delete_vm "$vm_name"
+# Delete the VM
+delete_vm "$disk_image"
 
 echo "VM deletion process completed."
 
