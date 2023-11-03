@@ -4,7 +4,7 @@
 
 The create_vm.sh script is a user-friendly tool designed for OpenBSD users to simplify the process of creating virtual machines (VMs) using the native vmd virtual machine daemon. This script streamlines the VM creation process by guiding users through a series of prompts to configure their new VM.
 
-# Key Features of the create_vm.sh Script:
+# Key Features of the create_vm.ksh Script:
 
 Interactive prompts for user input.
 Customizable VM name and disk size.
