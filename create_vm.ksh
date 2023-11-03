@@ -3,7 +3,7 @@
 # Function to list ISO images
 list_iso_images() {
     echo "Available ISO Images:"
-    ls /home/ryosuke/vm/image/iso 
+    ls ./vm/image/iso 
 }
 
 # Function to create a VM
@@ -13,11 +13,11 @@ create_vm() {
     iso_image=$3
 
     # Create disk image
-    vmctl create -s "$disk_size"G /home/ryosuke/vm/image/disk/"$vm_name".qcow2
+    vmctl create -s "$disk_size"G ./vm/image/disk/"$vm_name".qcow2
     echo "Disk image for $vm_name created."
 
     # Start the VM
-    vmctl start -m 1G -L -i 1 -r /home/ryosuke/vm/image/iso/"$iso_image" -d /home/ryosuke/vm/image/disk/"$vm_name".qcow2 "$vm_name"
+    vmctl start -m 1G -L -i 1 -r ./vm/image/iso/"$iso_image" -d ./vm/image/disk/"$vm_name".qcow2 "$vm_name"
     echo "VM $vm_name started."
 }
 

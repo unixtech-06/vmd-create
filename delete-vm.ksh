@@ -3,7 +3,7 @@
 # Function to list disk images
 list_disk_images() {
     echo "Available Disk Images:"
-    ls /home/ryosuke/vm/image/disk/
+    ls ./vm/image/disk/
 }
 
 # Function to delete a VM
