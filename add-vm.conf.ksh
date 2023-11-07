@@ -10,7 +10,7 @@ list_disk_images() {
 list_bridges() {
     # This function should be implemented in C as per the earlier discussion
     # and the output of that C program is captured here.
-    ./list_bridges
+    ./bin/list_bridges
 }
 
 # Function to append VM configuration to /etc/vm.conf
