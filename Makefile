@@ -2,7 +2,7 @@
 
 # Compiler and compiler flags
 CC = cc
-CFLAGS = -Wall -O2 -pipe
+CFLAGS = -Wall -O2 -pipe -march=native
 
 # Source and destination directories
 SRCDIR = src
