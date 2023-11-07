@@ -27,5 +27,7 @@ echo "Setting up VM directories..."
 create_disk_directory
 create_iso_directory
 
+chmod u+x ./*.ksh
+
 echo "Setup process completed."
 
