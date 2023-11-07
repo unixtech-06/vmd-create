@@ -2,7 +2,7 @@
 
 # Compiler and compiler flags
 CC = cc
-CFLAGS = -Wall -O2
+CFLAGS = -Wall -O2 -pipe
 
 # Source and destination directories
 SRCDIR = src
@@ -21,7 +21,7 @@ BIN = $(BINDIR)/$(TARGET)
 all: $(BIN)
 
 $(BIN): $(SRC)
-	$(CC) $(CFLAGS) -o $(BIN) $(SRC)
+	$(CC) $(CFLAGS) -o $(BIN) $(SRC) 
 
 # Clean target for cleaning up the build
 clean:
